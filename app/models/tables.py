@@ -1,0 +1,2 @@
+USERS = "users"
+RECORDS = "records"
