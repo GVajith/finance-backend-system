@@ -6,11 +6,9 @@ from app.constants.status import Status
 from app.config import DatabaseDetails
 from app.utils.auth_utils import get_user_role
 from sqlalchemy import text
-
+from sqlalchemy import text
 def get_summary(engine, request):
-    from sqlalchemy import text
-    from app.constants.status import Status
-    from app.rq_rs.dashboard_rq_rs import DashboardResponse
+
 
     try:
         with engine.connect() as conn:
@@ -83,7 +81,6 @@ def get_category_totals(engine: Engine, request: DashboardRequest) -> DashboardR
                 status=Status(status=True, message="Category totals fetched"),
                 data={"categories": data}
             )
-
     except Exception as e:
         return DashboardResponse(
             status=Status(status=False, message=str(e)),

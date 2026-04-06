@@ -9,6 +9,3 @@ app = FastAPI()
 app.include_router(user_router, prefix="/users")
 app.include_router(record_router, prefix="/records")
 app.include_router(dashboard_router, prefix="/dashboard")
-
-
-###Coffe$83409

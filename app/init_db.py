@@ -52,4 +52,4 @@ Index("idx_category", records.c.category)
 
 metadata.create_all(engine)
 
-print("✅ All tables created successfully")
+print("All tables created successfully")
