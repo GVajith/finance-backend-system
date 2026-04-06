@@ -13,19 +13,6 @@ app.include_router(dashboard_router, prefix="/dashboard")
 
 
 
-
-
-DB_FILE = "finance.db"
-
-if not os.path.exists(DB_FILE):
-    import init_db
-
-
-app.include_router(user_router, prefix="/users", tags=["Users"])
-app.include_router(record_router, prefix="/records", tags=["Records"])
-app.include_router(dashboard_router, prefix="/dashboard", tags=["Dashboard"])
-
-
 @app.get("/")
 def root():
     return {
