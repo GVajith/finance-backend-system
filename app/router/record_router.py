@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from sqlalchemy import create_engine
 from app.config import DatabaseDetails
 from app.rq_rs.record_rq_rs import *
-from app.utils.record_utils import *
+from app.services.record_service import *
 
 
 

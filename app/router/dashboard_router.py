@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from sqlalchemy import create_engine
 from app.config import DatabaseDetails
 from app.rq_rs.dashboard_rq_rs import DashboardRequest, DashboardResponse
-from app.utils.dashboard_utils import *
+from app.services.dashboard_service import *
 
 dashboard_router = APIRouter()
 

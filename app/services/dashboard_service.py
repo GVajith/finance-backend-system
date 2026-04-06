@@ -4,7 +4,7 @@ from app.models import tables
 from app.rq_rs.dashboard_rq_rs import DashboardRequest, DashboardResponse
 from app.constants.status import Status
 from app.config import DatabaseDetails
-from app.utils.auth_utils import get_user_role
+from app.services.auth_service import get_user_role
 from sqlalchemy import text
 from sqlalchemy import text
 def get_summary(engine, request):

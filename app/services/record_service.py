@@ -5,7 +5,7 @@ from app.models import tables
 from app.rq_rs.record_rq_rs import *
 from app.constants.status import Status
 from app.config import DatabaseDetails
-from app.utils.auth_utils import get_user_role
+from app.services.auth_service import get_user_role
 
 def create_record(engine: Engine, request: RecordCreateRequest) -> RecordResponse:
     metadata = MetaData(schema=DatabaseDetails.DEFAULT_SCHEMA)
