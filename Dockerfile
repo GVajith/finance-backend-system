@@ -11,7 +11,7 @@ COPY requirements.docker.txt .
 
 RUN pip install --no-cache-dir --only-binary=:all: -r requirements.docker.txt
 
-COPY app .
+COPY . .
 
 EXPOSE 10000
 
